@@ -43,7 +43,7 @@ function addItemToShoppingList() {
     // Tell JS to insert <li> ${itemName} - ${itemAmount} </li> and interpret it as HTML at the end of shopping-list
     itemListRef.insertAdjacentHTML("afterend", itemHtml);
 
-    setDeleteButtonEvent(id);
+//    setDeleteButtonEvent(id);      Disabled for debugging
 }
 
 function setDeleteButtonEvent(id) {
