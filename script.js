@@ -1,5 +1,5 @@
 // Wait until the page is fully loaded before calling the beginning function
-window.onload = function () {
+/*window.onload = function () {
     initShoppingList();
 };
 
@@ -43,13 +43,13 @@ function addItemToShoppingList() {
     // Tell JS to insert <li> ${itemName} - ${itemAmount} </li> and interpret it as HTML at the end of shopping-list
     itemListRef.insertAdjacentHTML("afterend", itemHtml);
 
-//    setDeleteButtonEvent(id);      Disabled for debugging
+    setDeleteButtonEvent(id);
 }
 
 function setDeleteButtonEvent(id) {
     let deleteButton = document.getElementById("button"+id);
     deleteButton.addEventListener("click", () => {
-        console.log("DeleteButton Works");
+        console.log("DeleteButton Works");No
         removeListItem(id);
     });
 }
@@ -58,10 +58,10 @@ function setDeleteButtonEvent(id) {
 function createListItemHtml(itemName, itemAmount, id) {
     // Return the values in a HTML list command
     // Create delete button
-    return '<li id="item${id}"> ' +
-        '${itemName} - ${itemAmount}' +
-        '<button id="item${id}" type="button">Delete Item</button>' +
-        ' </li>';
+    return `<li id="item${id}">
+            ${itemName} - ${itemAmount}
+            <button id="item${id}" type="button">Delete Item</button>
+            </li>`;
 
 }
 
